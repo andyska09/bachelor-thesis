@@ -1,0 +1,6 @@
+{
+  "model": "timesfm",
+  "params": {
+    "model": "timesfm-2.5-200m-pytorch"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "timestamp": "20260426_200823",
+  "model": "seasonal_naive",
+  "freq": "m",
+  "benchmarks": [
+    "drift",
+    "periodic_spaces",
+    "random",
+    "seasonal",
+    "workers"
+  ],
+  "lookback": 288,
+  "horizon": 144,
+  "n_windows": 56,
+  "n_runs": 1,
+  "model_config_file": null
+}

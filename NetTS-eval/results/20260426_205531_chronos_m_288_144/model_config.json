@@ -1,0 +1,7 @@
+{
+  "model": "chronos",
+  "params": {
+    "model": "amazon/chronos-2",
+    "device": "auto"
+  }
+}

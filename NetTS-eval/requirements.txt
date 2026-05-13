@@ -1,0 +1,21 @@
+cesnet-tszoo>=0.1.0
+mlcroissant>=1.1.0
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Forecasting models
+prophet>=1.1.5
+statsmodels>=0.14.0
+timesfm[torch] @ git+https://github.com/google-research/timesfm.git@2dcc66fbfe2155adba1af66aa4d564a0ee52f61e
+granite-tsfm>=0.3.5
+chronos-forecasting>=2.0
+uni2ts>=2.0.0
+
+tsai>=0.4.1
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=6.5.1
+scipy
+ipywidgets==8.1.8
+ipython==9.9.0

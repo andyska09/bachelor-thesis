@@ -1,0 +1,11 @@
+# Git LFS - benchmark data (CSV/Parquet)
+NetTS-eval/benchmarks/hourly/**/*.csv filter=lfs diff=lfs merge=lfs -text
+NetTS-eval/benchmarks/hourly/**/*.parquet filter=lfs diff=lfs merge=lfs -text
+NetTS-eval/benchmarks/10min/**/*.csv filter=lfs diff=lfs merge=lfs -text
+NetTS-eval/benchmarks/10min/**/*.parquet filter=lfs diff=lfs merge=lfs -text
+
+# Git LFS - ips_full score files
+NetTS-experiments/scores/**/*_ips_full.csv filter=lfs diff=lfs merge=lfs -text
+
+# Git LFS - large sweep files
+NetTS-experiments/scores/**/DRIFT_SWEEP_*.csv filter=lfs diff=lfs merge=lfs -text

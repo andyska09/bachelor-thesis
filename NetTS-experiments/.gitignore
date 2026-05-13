@@ -1,0 +1,11 @@
+data
+/assignment/
+__pycache__/
+*.pyc
+.pytest_cache/
+/docs/
+.DS_Store
+*.png
+.vscode/
+figures/
+DRIFT_SWEEP_ips_full.csv

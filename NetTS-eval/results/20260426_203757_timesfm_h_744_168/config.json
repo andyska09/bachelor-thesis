@@ -1,0 +1,17 @@
+{
+  "timestamp": "20260426_203757",
+  "model": "timesfm",
+  "freq": "h",
+  "benchmarks": [
+    "drift",
+    "periodic_spaces",
+    "random",
+    "seasonal",
+    "workers"
+  ],
+  "lookback": 744,
+  "horizon": 168,
+  "n_windows": 8,
+  "n_runs": 1,
+  "model_config_file": null
+}

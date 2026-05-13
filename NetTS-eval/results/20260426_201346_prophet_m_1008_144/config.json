@@ -1,0 +1,17 @@
+{
+  "timestamp": "20260426_201346",
+  "model": "prophet",
+  "freq": "m",
+  "benchmarks": [
+    "drift",
+    "periodic_spaces",
+    "random",
+    "seasonal",
+    "workers"
+  ],
+  "lookback": 1008,
+  "horizon": 144,
+  "n_windows": 56,
+  "n_runs": 1,
+  "model_config_file": null
+}

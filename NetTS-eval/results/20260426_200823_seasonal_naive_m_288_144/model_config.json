@@ -1,0 +1,7 @@
+{
+  "model": "seasonal_naive",
+  "params": {
+    "freq": "m",
+    "m": 144
+  }
+}

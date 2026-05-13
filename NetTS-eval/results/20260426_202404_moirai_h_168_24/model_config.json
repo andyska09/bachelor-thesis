@@ -1,0 +1,6 @@
+{
+  "model": "moirai",
+  "params": {
+    "model": "Salesforce/moirai-2.0-R-small"
+  }
+}

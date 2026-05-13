@@ -1,0 +1,8 @@
+{
+  "model": "ttm",
+  "params": {
+    "model": "ibm-research/ttm-research-r2/1024-192-ft-r2",
+    "freq_token": 4,
+    "device": "cuda:0"
+  }
+}

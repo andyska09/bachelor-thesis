@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Claude Code
+.claude/
+
+# NetTS-eval
+NetTS-eval/data/
+NetTS-eval/graphs/
+NetTS-eval/pyproject.toml
+
+# NetTS-experiments
+NetTS-experiments/data/
+NetTS-experiments/figures/
+NetTS-experiments/*.png

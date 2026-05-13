@@ -1,0 +1,28 @@
+{
+  "model": "gru_fcn",
+  "params": {
+    "lookback": 744,
+    "horizon": 168,
+    "hidden_size": 20,
+    "rnn_layers": 4,
+    "bidirectional": true,
+    "log_transform": true,
+    "rnn_dropout": 0.3,
+    "conv_layers": [
+      64,
+      128,
+      64
+    ],
+    "kss": [
+      7,
+      5,
+      3
+    ],
+    "fc_dropout": 0.5,
+    "epochs": 20,
+    "lr": 0.01,
+    "batch_size": 16,
+    "patience": 5,
+    "device": "cuda"
+  }
+}

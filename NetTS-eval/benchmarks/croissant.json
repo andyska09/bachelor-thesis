@@ -1,0 +1,1745 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "equivalentProperty": "cr:equivalentProperty",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "samplingRate": "cr:samplingRate",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@type": "sc:Dataset",
+  "name": "NetTS-bench",
+  "description": "NetTS-bench: Network Traffic Time Series Benchmark suite for evaluating forecasting models on CESNET-TimeSeries24 network traffic data. Contains 5 benchmark types (seasonal, drift, periodic_spaces, workers, random) at 2 temporal resolutions (hourly, 10-minute) across 3 aggregation levels (IPs, institutions, subnets). 532 total time series. Data split: 60% train, 20% validation, 20% test. Target variable: n_bytes.",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "citeAs": "Anonymous. (2026). NetTS: Behavioral Diagnostic Benchmarks for Network Traffic Forecasting",
+  "url": "https://osf.io/[anonymous-dataset]",
+  "keywords": [
+    "time series",
+    "forecasting",
+    "network traffic",
+    "benchmark",
+    "ISP",
+    "diagnostic evaluation",
+    "behavioral evaluation",
+    "CESNET"
+  ],
+  "creator": {
+    "@type": "sc:Person",
+    "name": "Anonymous"
+  },
+  "publisher": {
+    "@type": "sc:Organization",
+    "name": "Anonymous"
+  },
+  "datePublished": "2026-01-01",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "version": "1.0.0",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-drift-ips-csv",
+      "name": "10min/drift/ips.csv",
+      "contentUrl": "10min/drift/ips.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "ec2eaf9df0a65f1f86ef42dd8420a81df9c6f6145ebaa648e6d7dd2eedd34781"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-drift-ips-parquet",
+      "name": "10min/drift/ips.parquet",
+      "contentUrl": "10min/drift/ips.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "f710fac3eb595cc03bb0d6dbf22e420f3178773650f4d6a73d5955f3faa935cc"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-drift-institutions-csv",
+      "name": "10min/drift/institutions.csv",
+      "contentUrl": "10min/drift/institutions.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "6cf2c58836a6af8772fcd1bebcc90511a536b380468ed6a29c666d5c18f128ad"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-drift-institutions-parquet",
+      "name": "10min/drift/institutions.parquet",
+      "contentUrl": "10min/drift/institutions.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "dced65c32de16217f593622337b9d3aede6467b81ce8c6f0c308c0529771602d"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-drift-subnets-csv",
+      "name": "10min/drift/subnets.csv",
+      "contentUrl": "10min/drift/subnets.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "1afaf773d14bb7d676abe05b4581db8f7df83a3e8433daa05f7b4b3549f5eaf4"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-drift-subnets-parquet",
+      "name": "10min/drift/subnets.parquet",
+      "contentUrl": "10min/drift/subnets.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "6325d1dd6c4c338e1687e8126178d6741c9fe2e1d1099d71c7a0b93b546cd894"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-periodic_spaces-ips-csv",
+      "name": "10min/periodic_spaces/ips.csv",
+      "contentUrl": "10min/periodic_spaces/ips.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "e8aa311a57224167b0db507df392ef7cb5598edd09c978264bff55c213ba652d"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-periodic_spaces-ips-parquet",
+      "name": "10min/periodic_spaces/ips.parquet",
+      "contentUrl": "10min/periodic_spaces/ips.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "03256ee0f951575c7d0e0628f71cd6e853b1e70dcd12449da192a1013a9d8a1e"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-random-ips-csv",
+      "name": "10min/random/ips.csv",
+      "contentUrl": "10min/random/ips.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "b8e7014e224cad515c2eddc45ab0926f39da21ef3beee3039afdaff65b673aef"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-random-ips-parquet",
+      "name": "10min/random/ips.parquet",
+      "contentUrl": "10min/random/ips.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "5ddbc7505839bca37ab013a180b645d4805cb04c397ec1d783932c3d12e14e60"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-random-institutions-csv",
+      "name": "10min/random/institutions.csv",
+      "contentUrl": "10min/random/institutions.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "461697596869444d22b48875815f38e33677d76d7b36cf1d966bf967f1de4f54"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-random-institutions-parquet",
+      "name": "10min/random/institutions.parquet",
+      "contentUrl": "10min/random/institutions.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "91994a715173ac2d6d8d8d646bbb2eecda4c555df3827824148a00b48bdc32ea"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-random-subnets-csv",
+      "name": "10min/random/subnets.csv",
+      "contentUrl": "10min/random/subnets.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "c7dd597913c5334f767cb6632aea5207a437fb847db9e820ff670337c28fffc8"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-random-subnets-parquet",
+      "name": "10min/random/subnets.parquet",
+      "contentUrl": "10min/random/subnets.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "b605858989cae032d1e6a0f9285f635844f401f8b0fb041a1fd90b8ae743093b"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-seasonal-ips-csv",
+      "name": "10min/seasonal/ips.csv",
+      "contentUrl": "10min/seasonal/ips.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "01b4f17f5924265567fbc4205eaf52c52d47a942997133987807a363d9f9e53f"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-seasonal-ips-parquet",
+      "name": "10min/seasonal/ips.parquet",
+      "contentUrl": "10min/seasonal/ips.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "6de051acc210d944f9ba1ad297cbf7ccae474f35981abca5446805e578939f40"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-seasonal-institutions-csv",
+      "name": "10min/seasonal/institutions.csv",
+      "contentUrl": "10min/seasonal/institutions.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "9b0f90d2c32bc6954c5b89ba2c20f262d8446f38774feed3889216f815ea8a0d"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-seasonal-institutions-parquet",
+      "name": "10min/seasonal/institutions.parquet",
+      "contentUrl": "10min/seasonal/institutions.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "ff620c48c7c53c675ed71f9e8e3b62da7ddd1454a544ebd5f370f49a0fa6f333"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-seasonal-subnets-csv",
+      "name": "10min/seasonal/subnets.csv",
+      "contentUrl": "10min/seasonal/subnets.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "6a3768decb14d2cf4b22b9ea4860975ca00c3b9cb419e7b2bd5b4281cda297e0"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-seasonal-subnets-parquet",
+      "name": "10min/seasonal/subnets.parquet",
+      "contentUrl": "10min/seasonal/subnets.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "b303998ba046e527a6685392dace20c7729a62c0c10604ca672c61e458c74bc1"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-workers-ips-csv",
+      "name": "10min/workers/ips.csv",
+      "contentUrl": "10min/workers/ips.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "de9c9ab78575d547aa42fb832a4540e4dc2d36f65e14395e02b5ce71f124fc29"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "10min-workers-ips-parquet",
+      "name": "10min/workers/ips.parquet",
+      "contentUrl": "10min/workers/ips.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "b4f6db7612f8be450de40f67dacd28aa27bd84894f5cbdc14fbe5dd6db7a3c93"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-drift-ips-csv",
+      "name": "hourly/drift/ips.csv",
+      "contentUrl": "hourly/drift/ips.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "dbbd9f52213c030041ab88d1222e23bb4ce15a561a39880bbe3d9551f0b494f9"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-drift-ips-parquet",
+      "name": "hourly/drift/ips.parquet",
+      "contentUrl": "hourly/drift/ips.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "99980a2ed0df6cc0fa4f61243cae013eb1c63eb1e278e8337158e16283f19f3c"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-drift-institutions-csv",
+      "name": "hourly/drift/institutions.csv",
+      "contentUrl": "hourly/drift/institutions.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "6ee3a89ebdb4310c2560bccd066884554dceb1b8f8d72292468e3eaa769d0cfd"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-drift-institutions-parquet",
+      "name": "hourly/drift/institutions.parquet",
+      "contentUrl": "hourly/drift/institutions.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "bb0741de3d5578cef687a6d5d0a5693ba01a34023c767e7d03a5f6eaf7c9b903"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-drift-subnets-csv",
+      "name": "hourly/drift/subnets.csv",
+      "contentUrl": "hourly/drift/subnets.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "73dda2a55e09778494bc513e634a94da9d547c36ba88ac1063635cf38ef71675"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-drift-subnets-parquet",
+      "name": "hourly/drift/subnets.parquet",
+      "contentUrl": "hourly/drift/subnets.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "6ff51a1889c0ea284b3462be7a45f038f7c67c6c73caa11c095ede35d08c3305"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-periodic_spaces-ips-csv",
+      "name": "hourly/periodic_spaces/ips.csv",
+      "contentUrl": "hourly/periodic_spaces/ips.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "39999d30a96886f8cf0571b3039bda35829d7a209d2664008e67fe474b133e6d"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-periodic_spaces-ips-parquet",
+      "name": "hourly/periodic_spaces/ips.parquet",
+      "contentUrl": "hourly/periodic_spaces/ips.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "7a228da38f43d751ac8bc90994f4e15003ecca19d9d8c7c297a959b1b47e11fa"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-random-ips-csv",
+      "name": "hourly/random/ips.csv",
+      "contentUrl": "hourly/random/ips.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "9e2317dda698e0728b54f589de9770424fea65c41875ce624b4cccedc8e7a2e3"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-random-ips-parquet",
+      "name": "hourly/random/ips.parquet",
+      "contentUrl": "hourly/random/ips.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "afe27cdddce7bfdb5ac4554969770a4634091cd050b3d6d4cfd38864dc6bad3b"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-random-institutions-csv",
+      "name": "hourly/random/institutions.csv",
+      "contentUrl": "hourly/random/institutions.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "1e274e5a3b75038c74d052143fd17e575e902ce26794282f4a1684ce362effcc"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-random-institutions-parquet",
+      "name": "hourly/random/institutions.parquet",
+      "contentUrl": "hourly/random/institutions.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "1af14e5ec6071d53ef4579ee64c50fe323d7f9dd1648e48d4770a49407971fb8"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-random-subnets-csv",
+      "name": "hourly/random/subnets.csv",
+      "contentUrl": "hourly/random/subnets.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "1f5fd884e8f50b61e9b0e9559dafc8792dea624fedf8ba1630a95c610ffc89b7"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-random-subnets-parquet",
+      "name": "hourly/random/subnets.parquet",
+      "contentUrl": "hourly/random/subnets.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "add47759fecc61dc24482dc298310aa795a6e92252665b2077c29cce68f75e55"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-seasonal-ips-csv",
+      "name": "hourly/seasonal/ips.csv",
+      "contentUrl": "hourly/seasonal/ips.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "8258a092dca1ac6bd3b1b63e560373a1a6476f017eb2aed3b46e21de854b04ac"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-seasonal-ips-parquet",
+      "name": "hourly/seasonal/ips.parquet",
+      "contentUrl": "hourly/seasonal/ips.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "b980e28d1ea25aae431da0d924ba57f454946c91434744f8c92abb5a13a8e579"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-seasonal-institutions-csv",
+      "name": "hourly/seasonal/institutions.csv",
+      "contentUrl": "hourly/seasonal/institutions.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "8f0bbc1ac627286c19cc0e8f7e587bef254effb8dad48af2c2b569ddffb3d511"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-seasonal-institutions-parquet",
+      "name": "hourly/seasonal/institutions.parquet",
+      "contentUrl": "hourly/seasonal/institutions.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "0ac905be35651f9ceec43731769bb9de3e479136c2369f54bc257d662c29de23"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-seasonal-subnets-csv",
+      "name": "hourly/seasonal/subnets.csv",
+      "contentUrl": "hourly/seasonal/subnets.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "6a7c009d997fe5777a5ae698bdc90df8a3d3f6e842085d2f3b18413d58199c98"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-seasonal-subnets-parquet",
+      "name": "hourly/seasonal/subnets.parquet",
+      "contentUrl": "hourly/seasonal/subnets.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "104625b393f9e1bef80c70be350d6df5e446ed10437246fa6ca302dbaa2d0d15"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-workers-ips-csv",
+      "name": "hourly/workers/ips.csv",
+      "contentUrl": "hourly/workers/ips.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "dd807b3d4409fb0be4c734760cffdbec1d0dbabe4c14dc0ab87572c64880947c"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hourly-workers-ips-parquet",
+      "name": "hourly/workers/ips.parquet",
+      "contentUrl": "hourly/workers/ips.parquet",
+      "encodingFormat": "application/x-parquet",
+      "sha256": "9c6885238cbe88bed85020884a9891bff7c3544cd499bc248d71ceb77dda86f9"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "10min-drift-ips",
+      "name": "10min-drift-ips",
+      "description": "10min/drift — ips-level time series (25 series)",
+      "key": [
+        {
+          "@id": "10min-drift-ips/datetime"
+        },
+        {
+          "@id": "10min-drift-ips/id_ip"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "10min-drift-ips/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "10min-drift-ips-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-drift-ips/id_ip",
+          "name": "id_ip",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-drift-ips-csv"
+            },
+            "extract": {
+              "column": "id_ip"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-drift-ips/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-drift-ips-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "10min-drift-institutions",
+      "name": "10min-drift-institutions",
+      "description": "10min/drift — institutions-level time series (25 series)",
+      "key": [
+        {
+          "@id": "10min-drift-institutions/datetime"
+        },
+        {
+          "@id": "10min-drift-institutions/id_institution"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "10min-drift-institutions/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "10min-drift-institutions-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-drift-institutions/id_institution",
+          "name": "id_institution",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-drift-institutions-csv"
+            },
+            "extract": {
+              "column": "id_institution"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-drift-institutions/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-drift-institutions-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "10min-drift-subnets",
+      "name": "10min-drift-subnets",
+      "description": "10min/drift — subnets-level time series (25 series)",
+      "key": [
+        {
+          "@id": "10min-drift-subnets/datetime"
+        },
+        {
+          "@id": "10min-drift-subnets/id_institution_subnet"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "10min-drift-subnets/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "10min-drift-subnets-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-drift-subnets/id_institution_subnet",
+          "name": "id_institution_subnet",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-drift-subnets-csv"
+            },
+            "extract": {
+              "column": "id_institution_subnet"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-drift-subnets/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-drift-subnets-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "10min-periodic_spaces-ips",
+      "name": "10min-periodic_spaces-ips",
+      "description": "10min/periodic_spaces — ips-level time series (25 series)",
+      "key": [
+        {
+          "@id": "10min-periodic_spaces-ips/datetime"
+        },
+        {
+          "@id": "10min-periodic_spaces-ips/id_ip"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "10min-periodic_spaces-ips/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "10min-periodic_spaces-ips-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-periodic_spaces-ips/id_ip",
+          "name": "id_ip",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-periodic_spaces-ips-csv"
+            },
+            "extract": {
+              "column": "id_ip"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-periodic_spaces-ips/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-periodic_spaces-ips-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "10min-random-ips",
+      "name": "10min-random-ips",
+      "description": "10min/random — ips-level time series (25 series)",
+      "key": [
+        {
+          "@id": "10min-random-ips/datetime"
+        },
+        {
+          "@id": "10min-random-ips/id_ip"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "10min-random-ips/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "10min-random-ips-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-random-ips/id_ip",
+          "name": "id_ip",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-random-ips-csv"
+            },
+            "extract": {
+              "column": "id_ip"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-random-ips/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-random-ips-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "10min-random-institutions",
+      "name": "10min-random-institutions",
+      "description": "10min/random — institutions-level time series (19 series)",
+      "key": [
+        {
+          "@id": "10min-random-institutions/datetime"
+        },
+        {
+          "@id": "10min-random-institutions/id_institution"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "10min-random-institutions/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "10min-random-institutions-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-random-institutions/id_institution",
+          "name": "id_institution",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-random-institutions-csv"
+            },
+            "extract": {
+              "column": "id_institution"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-random-institutions/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-random-institutions-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "10min-random-subnets",
+      "name": "10min-random-subnets",
+      "description": "10min/random — subnets-level time series (25 series)",
+      "key": [
+        {
+          "@id": "10min-random-subnets/datetime"
+        },
+        {
+          "@id": "10min-random-subnets/id_institution_subnet"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "10min-random-subnets/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "10min-random-subnets-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-random-subnets/id_institution_subnet",
+          "name": "id_institution_subnet",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-random-subnets-csv"
+            },
+            "extract": {
+              "column": "id_institution_subnet"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-random-subnets/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-random-subnets-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "10min-seasonal-ips",
+      "name": "10min-seasonal-ips",
+      "description": "10min/seasonal — ips-level time series (25 series)",
+      "key": [
+        {
+          "@id": "10min-seasonal-ips/datetime"
+        },
+        {
+          "@id": "10min-seasonal-ips/id_ip"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "10min-seasonal-ips/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "10min-seasonal-ips-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-seasonal-ips/id_ip",
+          "name": "id_ip",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-seasonal-ips-csv"
+            },
+            "extract": {
+              "column": "id_ip"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-seasonal-ips/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-seasonal-ips-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "10min-seasonal-institutions",
+      "name": "10min-seasonal-institutions",
+      "description": "10min/seasonal — institutions-level time series (25 series)",
+      "key": [
+        {
+          "@id": "10min-seasonal-institutions/datetime"
+        },
+        {
+          "@id": "10min-seasonal-institutions/id_institution"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "10min-seasonal-institutions/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "10min-seasonal-institutions-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-seasonal-institutions/id_institution",
+          "name": "id_institution",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-seasonal-institutions-csv"
+            },
+            "extract": {
+              "column": "id_institution"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-seasonal-institutions/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-seasonal-institutions-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "10min-seasonal-subnets",
+      "name": "10min-seasonal-subnets",
+      "description": "10min/seasonal — subnets-level time series (25 series)",
+      "key": [
+        {
+          "@id": "10min-seasonal-subnets/datetime"
+        },
+        {
+          "@id": "10min-seasonal-subnets/id_institution_subnet"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "10min-seasonal-subnets/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "10min-seasonal-subnets-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-seasonal-subnets/id_institution_subnet",
+          "name": "id_institution_subnet",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-seasonal-subnets-csv"
+            },
+            "extract": {
+              "column": "id_institution_subnet"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-seasonal-subnets/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-seasonal-subnets-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "10min-workers-ips",
+      "name": "10min-workers-ips",
+      "description": "10min/workers — ips-level time series (25 series)",
+      "key": [
+        {
+          "@id": "10min-workers-ips/datetime"
+        },
+        {
+          "@id": "10min-workers-ips/id_ip"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "10min-workers-ips/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "10min-workers-ips-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-workers-ips/id_ip",
+          "name": "id_ip",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-workers-ips-csv"
+            },
+            "extract": {
+              "column": "id_ip"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "10min-workers-ips/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "10min-workers-ips-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "hourly-drift-ips",
+      "name": "hourly-drift-ips",
+      "description": "hourly/drift — ips-level time series (25 series)",
+      "key": [
+        {
+          "@id": "hourly-drift-ips/datetime"
+        },
+        {
+          "@id": "hourly-drift-ips/id_ip"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-drift-ips/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-drift-ips-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-drift-ips/id_ip",
+          "name": "id_ip",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-drift-ips-csv"
+            },
+            "extract": {
+              "column": "id_ip"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-drift-ips/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-drift-ips-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "hourly-drift-institutions",
+      "name": "hourly-drift-institutions",
+      "description": "hourly/drift — institutions-level time series (25 series)",
+      "key": [
+        {
+          "@id": "hourly-drift-institutions/datetime"
+        },
+        {
+          "@id": "hourly-drift-institutions/id_institution"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-drift-institutions/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-drift-institutions-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-drift-institutions/id_institution",
+          "name": "id_institution",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-drift-institutions-csv"
+            },
+            "extract": {
+              "column": "id_institution"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-drift-institutions/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-drift-institutions-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "hourly-drift-subnets",
+      "name": "hourly-drift-subnets",
+      "description": "hourly/drift — subnets-level time series (25 series)",
+      "key": [
+        {
+          "@id": "hourly-drift-subnets/datetime"
+        },
+        {
+          "@id": "hourly-drift-subnets/id_institution_subnet"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-drift-subnets/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-drift-subnets-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-drift-subnets/id_institution_subnet",
+          "name": "id_institution_subnet",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-drift-subnets-csv"
+            },
+            "extract": {
+              "column": "id_institution_subnet"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-drift-subnets/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-drift-subnets-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "hourly-periodic_spaces-ips",
+      "name": "hourly-periodic_spaces-ips",
+      "description": "hourly/periodic_spaces — ips-level time series (25 series)",
+      "key": [
+        {
+          "@id": "hourly-periodic_spaces-ips/datetime"
+        },
+        {
+          "@id": "hourly-periodic_spaces-ips/id_ip"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-periodic_spaces-ips/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-periodic_spaces-ips-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-periodic_spaces-ips/id_ip",
+          "name": "id_ip",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-periodic_spaces-ips-csv"
+            },
+            "extract": {
+              "column": "id_ip"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-periodic_spaces-ips/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-periodic_spaces-ips-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "hourly-random-ips",
+      "name": "hourly-random-ips",
+      "description": "hourly/random — ips-level time series (25 series)",
+      "key": [
+        {
+          "@id": "hourly-random-ips/datetime"
+        },
+        {
+          "@id": "hourly-random-ips/id_ip"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-random-ips/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-random-ips-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-random-ips/id_ip",
+          "name": "id_ip",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-random-ips-csv"
+            },
+            "extract": {
+              "column": "id_ip"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-random-ips/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-random-ips-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "hourly-random-institutions",
+      "name": "hourly-random-institutions",
+      "description": "hourly/random — institutions-level time series (13 series)",
+      "key": [
+        {
+          "@id": "hourly-random-institutions/datetime"
+        },
+        {
+          "@id": "hourly-random-institutions/id_institution"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-random-institutions/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-random-institutions-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-random-institutions/id_institution",
+          "name": "id_institution",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-random-institutions-csv"
+            },
+            "extract": {
+              "column": "id_institution"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-random-institutions/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-random-institutions-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "hourly-random-subnets",
+      "name": "hourly-random-subnets",
+      "description": "hourly/random — subnets-level time series (25 series)",
+      "key": [
+        {
+          "@id": "hourly-random-subnets/datetime"
+        },
+        {
+          "@id": "hourly-random-subnets/id_institution_subnet"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-random-subnets/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-random-subnets-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-random-subnets/id_institution_subnet",
+          "name": "id_institution_subnet",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-random-subnets-csv"
+            },
+            "extract": {
+              "column": "id_institution_subnet"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-random-subnets/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-random-subnets-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "hourly-seasonal-ips",
+      "name": "hourly-seasonal-ips",
+      "description": "hourly/seasonal — ips-level time series (25 series)",
+      "key": [
+        {
+          "@id": "hourly-seasonal-ips/datetime"
+        },
+        {
+          "@id": "hourly-seasonal-ips/id_ip"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-seasonal-ips/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-seasonal-ips-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-seasonal-ips/id_ip",
+          "name": "id_ip",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-seasonal-ips-csv"
+            },
+            "extract": {
+              "column": "id_ip"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-seasonal-ips/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-seasonal-ips-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "hourly-seasonal-institutions",
+      "name": "hourly-seasonal-institutions",
+      "description": "hourly/seasonal — institutions-level time series (25 series)",
+      "key": [
+        {
+          "@id": "hourly-seasonal-institutions/datetime"
+        },
+        {
+          "@id": "hourly-seasonal-institutions/id_institution"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-seasonal-institutions/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-seasonal-institutions-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-seasonal-institutions/id_institution",
+          "name": "id_institution",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-seasonal-institutions-csv"
+            },
+            "extract": {
+              "column": "id_institution"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-seasonal-institutions/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-seasonal-institutions-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "hourly-seasonal-subnets",
+      "name": "hourly-seasonal-subnets",
+      "description": "hourly/seasonal — subnets-level time series (25 series)",
+      "key": [
+        {
+          "@id": "hourly-seasonal-subnets/datetime"
+        },
+        {
+          "@id": "hourly-seasonal-subnets/id_institution_subnet"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-seasonal-subnets/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-seasonal-subnets-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-seasonal-subnets/id_institution_subnet",
+          "name": "id_institution_subnet",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-seasonal-subnets-csv"
+            },
+            "extract": {
+              "column": "id_institution_subnet"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-seasonal-subnets/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-seasonal-subnets-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "hourly-workers-ips",
+      "name": "hourly-workers-ips",
+      "description": "hourly/workers — ips-level time series (25 series)",
+      "key": [
+        {
+          "@id": "hourly-workers-ips/datetime"
+        },
+        {
+          "@id": "hourly-workers-ips/id_ip"
+        }
+      ],
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-workers-ips/datetime",
+          "name": "datetime",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-workers-ips-csv"
+            },
+            "extract": {
+              "column": "datetime"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-workers-ips/id_ip",
+          "name": "id_ip",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-workers-ips-csv"
+            },
+            "extract": {
+              "column": "id_ip"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "hourly-workers-ips/n_bytes",
+          "name": "n_bytes",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "hourly-workers-ips-csv"
+            },
+            "extract": {
+              "column": "n_bytes"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "isBasedOn": {
+    "@type": "sc:Dataset",
+    "name": "CESNET-TimeSeries24",
+    "url": "https://zenodo.org/records/13382427",
+    "citeAs": "Koumar, J., Hynek, K., Čejka, T., & Šiška, P. (2025). CESNET-TimeSeries24: Time Series Dataset for Network Traffic Anomaly Detection and Forecasting. Scientific Data, 12, 338. https://doi.org/10.1038/s41597-025-04603-x"
+  },
+  "prov:wasGeneratedBy": {
+    "@type": "prov:Activity",
+    "name": "NetTS benchmark curation pipeline",
+    "description": "NetTS is generated from the publicly released CESNET-TimeSeries24 dataset (see isBasedOn) by an algorithmic curation pipeline: (1) candidate series are loaded at 10-minute or 1-hour aggregation via the cesnet-tszoo Python library; (2) for each of the five diagnostic benchmarks (seasonal, drift, periodic_spaces, workers, random) a single quantitative structural criterion is evaluated on each candidate series to determine qualifying-pool membership; (3) 25 series per (benchmark, aggregation level) cell are sampled uniformly at random from each qualifying pool, with cells smaller than 25 retaining their full pool; (4) each selected series is split chronologically into 60% train / 20% validation / 20% test segments; (5) selected series are serialized to long-format CSV and Apache Parquet alongside a metadata.json file recording split boundaries and source identifiers. The pipeline is implemented in open-source Python; selection scripts are released for reproducibility."
+  },
+  "rai:hasSyntheticData": false,
+  "rai:dataCollection": "Passive flow-level monitoring on the CESNET3 academic backbone network using IPFIX. NetTS does not collect new data; it curates a structured diagnostic benchmark from the publicly released CESNET-TimeSeries24 dataset (see isBasedOn).",
+  "rai:dataCollectionType": "Passive network observation (observational, non-interventional).",
+  "rai:dataCollectionTimeframe": "2023-10-01 / 2024-07-31 (40 weeks).",
+  "rai:dataCollectionRawData": "IPFIX flow records aggregated into 10-minute and 1-hour byte-count time series. Only aggregated counts are released; no packet payloads, headers, or per-flow tuples are exposed.",
+  "rai:dataCollectionMissingData": "Time intervals with no observed traffic are encoded as 0, representing absence of bytes rather than missing measurement. There are no other missing values in the released benchmark series.",
+  "rai:dataAnnotationProtocol": "Benchmark assignment is fully algorithmic. Each candidate series passes a single quantitative structural criterion specific to one of five diagnostic benchmarks (seasonal strength FS >= 0.7; sustained MA-divergence drift over >= 14 consecutive days; ACF of binary activity indicator >= 0.6 for periodic spaces; working-hour ratio >= 0.6 for workstations; max |ACF| <= 0.1 for no-temporal-structure). From each qualifying pool, 25 series per (benchmark, aggregation level) cell are sampled uniformly at random.",
+  "rai:dataAnnotationPlatform": "N/A: algorithmic selection only, no annotation platform used.",
+  "rai:dataAnnotationAnalysis": "N/A: algorithmic selection only, no human annotation analysis performed.",
+  "rai:dataAnnotationDemographics": "N/A: algorithmic selection only, no human annotators.",
+  "rai:dataAnnotationTools": "N/A: algorithmic selection only, no annotation tools used.",
+  "rai:annotationsPerItem": "1: each time series belongs to exactly one diagnostic benchmark.",
+  "rai:annotatorDemographics": "N/A: algorithmic selection only, no human annotators.",
+  "rai:machineAnnotationTools": "Open-source Python selection scripts using statsmodels (STL decomposition for seasonal strength), NumPy/pandas (rolling moving averages for drift detection, autocorrelation analysis), and a Czech public-holiday calendar for working-hour computation. Scripts are released with the benchmark for reproducibility.",
+  "rai:dataPreprocessingProtocol": "(1) Series are loaded from CESNET-TimeSeries24 at 10-minute or 1-hour aggregation via the cesnet-tszoo library. (2) The single structural criterion for each diagnostic benchmark is applied to produce a qualifying pool. (3) 25 series per (benchmark, level) cell are sampled uniformly at random; cells with fewer than 25 qualifying series include the entire pool. (4) Each series is split chronologically 60 / 20 / 20 into train / validation / test (boundaries 4030 / 5374 / 6718 hourly steps). (5) Series are stored in long-format CSV and Parquet with stable identifiers.",
+  "rai:dataPreprocessingImputation": "Zero-fill is applied to time intervals with no observed traffic, consistent with the absence-of-bytes semantics. No other imputation, smoothing, scaling, or transformation is applied to the released benchmark values.",
+  "rai:dataUseCases": "Behavioral diagnostic evaluation of time-series forecasting models on ISP network traffic; probing of zero-shot foundation models (Chronos, TimesFM, Moirai, TTM) on a domain absent from their pretraining mixes; reproducible baseline establishment for network-traffic forecasting research; capability-stratified comparison of statistical, supervised deep-learning, and foundation model families.",
+  "rai:dataLimitations": "Single underlying ISP source (Czech academic backbone); single target variable (n_bytes); 25 series per (benchmark, level) cell may limit statistical power for fine-grained model comparisons; selection thresholds are calibrated by inspection and may not transfer to other networks without re-tuning; the Workstation Activity criterion uses the Czech public-holiday calendar; behaviors not covered by the five included benchmarks (e.g. burst-only patterns, attack traffic) are out of scope for v1.0.",
+  "rai:dataSocialImpact": "Positive: enables reproducible cross-paper benchmarking of network traffic forecasting models, supporting improved capacity planning, anomaly detection, and security operations on academic and enterprise networks. Negative: minimal direct risk because the released data contains only aggregated byte counts at institution / subnet / IP level with no payload, no application identifiers, and no user-level information.",
+  "rai:dataBiases": "Traffic patterns reflect academic-institution usage (term-driven seasonality, research traffic, university-scale infrastructure) and the Czech public-holiday calendar. Behaviors typical of commercial ISPs, mobile carriers, residential networks, or different geographic regions are under-represented or absent. Models tuned on NetTS may transfer imperfectly to those settings.",
+  "rai:dataSensitive": "The released data consists only of aggregated byte counts per time interval at three hierarchy levels (institution, subnet, IP). No packet payloads, no protocol headers, no application identifiers, no user accounts, no DNS or URL information, and no per-flow metadata are included.",
+  "rai:personalSensitiveInformation": "None directly. IP addresses present in the underlying CESNET-TimeSeries24 dataset are pseudonymized by the upstream providers via deterministic non-reversible re-mapping; institution and subnet identifiers are integer-coded. No link table connecting pseudonymous identifiers to real-world entities is published with the benchmark.",
+  "rai:dataAnonymizationProtocol": "Inherited from CESNET-TimeSeries24: original IP addresses are replaced with stable non-reversible pseudonymous integer identifiers; institution and subnet identifiers are integer-coded; no mapping back to real-world entities is released. NetTS does not introduce additional identifiers beyond those in the source dataset.",
+  "rai:dataReleaseMaintenancePlan": "Hosted with persistent DOI on a long-term ML-friendly archive (OSF / Zenodo). Selection scripts and benchmark loader code are versioned in public Git repositories using semantic versioning. Selected series IDs are frozen for v1.0.0; future minor versions will append additional behaviors or aggregation granularities without modifying existing benchmark composition, preserving cross-paper comparability. Issues and contributions are accepted via the public repository."
+}
+

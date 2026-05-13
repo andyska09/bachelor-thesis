@@ -1,0 +1,8 @@
+{
+  "model": "ttm",
+  "params": {
+    "model": "ibm-granite/granite-timeseries-ttm-r2/180-60-ft-l1-r2.1",
+    "freq_token": 7,
+    "device": "cuda:0"
+  }
+}
