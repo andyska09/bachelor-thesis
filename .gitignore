@@ -18,6 +18,7 @@ venv/
 NetTS-eval/data/
 NetTS-eval/graphs/
 NetTS-eval/pyproject.toml
+NetTS-eval/results/**/*_predictions.csv
 
 # NetTS-experiments
 NetTS-experiments/data/
