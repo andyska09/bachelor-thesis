@@ -22,8 +22,8 @@ This thesis presents five diagnostic benchmarks from the CESNET-TimeSeries24 dat
 │   ├── nettseval/               Python package (models, evaluation, metrics, benchmarks)
 │   ├── run_evaluation.py        Main CLI entry point
 │   ├── save_benchmarks.py       Export benchmark data from CESNET-TimeSeries24
-│   ├── benchmarks/              Benchmark data + selected_ids/ (IDs tracked, data gitignored)
-│   ├── results/                 Evaluation output (gitignored)
+│   ├── benchmarks/              Benchmark data + selected series IDs (LFS-tracked)
+│   ├── results/                 Evaluation output (LFS-tracked)
 │   └── result_exploration/      Analysis pipeline (tables, plots, notebooks)
 │
 ├── text/                        Thesis text
