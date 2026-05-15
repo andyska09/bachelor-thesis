@@ -24,3 +24,7 @@ NetTS-eval/results/**/*_predictions.csv
 NetTS-experiments/data/
 NetTS-experiments/figures/
 NetTS-experiments/*.png
+
+# latex source code
+text/src
+text/Thesis_Assignment_Ondřej_Skácel_Benchmarking_Network_Traffic_Forecasting.pdf
